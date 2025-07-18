@@ -1,0 +1,39 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+ENV/
+.venv/
+
+# VSCode settings
+.vscode/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Output and generated files
+*.pdf
+*.html
+*.jpeg
+*.jpg
+
+# Markdown output
+first_page.md
+remaining_pages.md
+
+# Table and image outputs
+images/
+tables_output/
+
+# Log files
+*.log
+
+# Requirements
+*.egg-info/
+dist/
+build/

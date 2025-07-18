@@ -1,0 +1,144 @@
+/* General document styling to mimic A4 PDF layout */
+@page {
+    size: A4;
+    margin: 20mm 25mm 20mm 25mm;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    line-height: 1.2;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    width: 210mm;
+    max-width: 210mm;
+    margin-left: auto;
+    margin-right: auto;
+    background: #ffffff;
+}
+
+/* Section styling */
+.section {
+    margin-bottom: 20px;
+}
+
+main {
+    padding: 0 20px;
+}
+
+/* Header styling */
+header {
+    position: relative;
+    min-height: 80px;
+    border-bottom: 2px solid #004080;
+    margin-bottom: 10px;
+}
+
+header span {
+    position: absolute;
+    left: 30px;
+    top: 50px;
+    color: #004080;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+header img {
+    position: absolute;
+    top: 0;
+    right: 50px;
+    max-width: 700px;
+    height: auto;
+}
+
+/* Heading styling */
+h1 {
+    font-size: 1.5em;
+    color: #004080;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.2em;
+    color: #004080;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+strong {
+    font-weight: bold;
+}
+
+/* AT A GLANCE section */
+.at-a-glance {
+    background-color: #e6e6e6;
+    padding: 10px;
+    border: 1px solid #004080;
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    margin-right: 20px;
+}
+
+.at-a-glance h3 {
+    margin: 0 0 10px 0;
+    text-align: center;
+    color: #ffffff;
+    background-color: #004080;
+    padding: 5px;
+}
+
+.at-a-glance ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.at-a-glance li {
+    margin-bottom: 5px;
+    padding-left: 10px;
+}
+
+/* Main content styling */
+p {
+    margin: 5px 0;
+    text-align: justify;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+}
+
+/* PMBus and RoHS logos */
+.pmbus-rohs {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    text-align: right;
+}
+
+.pmbus-rohs img {
+    max-width: 100px;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+/* Footer styling */
+footer {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #000000;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+h2[align="center"] {
+    font-size: 1.3em;
+    color: #004080;
+    margin: 20px 0 10px 0;
+}
