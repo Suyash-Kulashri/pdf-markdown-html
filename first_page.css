@@ -1,0 +1,141 @@
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            margin-left: 150px;
+            margin-right: 150px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        .header {
+            background-color: #e0e0e0;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .header-text {
+            flex: 1;
+        }
+        .header h1 {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0;
+            color: #005596;
+        }
+        .header h2 {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 5px 0;
+            color: #333;
+        }
+        .header img {
+            max-width: 200px;
+            height: auto;
+            margin-left: 20px;
+        }
+        .section-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #005596;
+            margin: 20px 0 10px;
+        }
+        .content {
+            font-size: 12px;
+            line-height: 1.5;
+        }
+        .content p {
+            margin: 0 0 10px;
+        }
+        .features-list {
+            list-style-type: none;
+            padding: 0;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+        .features-list li {
+            margin-bottom: 5px;
+            position: relative;
+            padding-left: 20px;
+        }
+        .features-list li:before {
+            content: "\2022";
+            color: #005596;
+            position: absolute;
+            left: 0;
+        }
+        .at-a-glance {
+            margin: 20px 0;
+        }
+        .at-a-glance table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 12px;
+        }
+        .at-a-glance th, .at-a-glance td {
+            padding: 8px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        .at-a-glance th {
+            font-weight: bold;
+            color: #005596;
+        }
+        .compliance-safety {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .compliance-safety div {
+            width: 48%;
+        }
+        .compliance-safety h3 {
+            font-size: 14px;
+            font-weight: bold;
+            color: #005596;
+            margin: 0 0 10px;
+        }
+        .compliance-safety ul {
+            list-style-type: none;
+            padding: 0;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+        .compliance-safety li {
+            margin-bottom: 5px;
+            position: relative;
+            padding-left: 20px;
+        }
+        .compliance-safety li:before {
+            content: "\2022";
+            color: #005596;
+            position: absolute;
+            left: 0;
+        }
+        .footer {
+            text-align: center;
+            font-size: 10px;
+            color: #666;
+            margin-top: 20px;
+        }
+        .bottom-images {
+            position: absolute;
+            bottom: 40px;
+            right: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .bottom-images img {
+            max-width: 150px;
+            height: auto;
+        }

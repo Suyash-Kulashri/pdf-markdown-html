@@ -2,6 +2,29 @@ import markdown
 import os
 import re
 
+def group_images_in_rows(md_content):
+    img_pattern = r'!\[.*?\]\((.*?)\)'
+    lines = md_content.split('\n')
+    new_lines = []
+    buffer = []
+
+    for line in lines:
+        match = re.match(img_pattern, line.strip())
+        if match:
+            img_src = match.group(1)
+            buffer.append(f'<img src="{img_src}" alt="" />')
+            if len(buffer) == 3:
+                new_lines.append('<div class="image-row">\n' + '\n'.join(buffer) + '\n</div>')
+                buffer = []
+        else:
+            if buffer:
+                new_lines.append('<div class="image-row">\n' + '\n'.join(buffer) + '\n</div>')
+                buffer = []
+            new_lines.append(line)
+    if buffer:
+        new_lines.append('<div class="image-row">\n' + '\n'.join(buffer) + '\n</div>')
+    return '\n'.join(new_lines)
+
 def convert_markdown_to_html(first_page_md_path, remaining_pages_md_path, css_file_path, output_html_path, image_file_path):
     # Hardcoded footer content
     footer_content = """
@@ -47,11 +70,15 @@ Specifications are subject to change without notice. Not responsible for errors 
         flags=re.DOTALL | re.MULTILINE
     ).strip()
     
+        # Group images in rows before converting to HTML
+    first_page_grouped = group_images_in_rows(first_page_cleaned)
+    remaining_pages_grouped = group_images_in_rows(remaining_pages_cleaned)
+
     # Convert Markdown to HTML
-    first_page_html = markdown.markdown(first_page_cleaned, extensions=['extra', 'codehilite'])
-    remaining_pages_html = markdown.markdown(remaining_pages_cleaned, extensions=['extra', 'codehilite'])
+    first_page_html = markdown.markdown(first_page_grouped, extensions=['extra', 'codehilite'])
+    remaining_pages_html = markdown.markdown(remaining_pages_grouped, extensions=['extra', 'codehilite'])
     footer_html = markdown.markdown(footer_content, extensions=['extra', 'codehilite'])
-    
+
     # Read the CSS file
     with open(css_file_path, 'r', encoding='utf-8') as css_file:
         css_content = css_file.read()

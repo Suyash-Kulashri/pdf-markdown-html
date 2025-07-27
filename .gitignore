@@ -37,3 +37,7 @@ tables_output/
 *.egg-info/
 dist/
 build/
+
+# Environment variables
+.env
+.env.*

@@ -254,7 +254,7 @@ def convert_markdown_to_html(markdown_path, html_output_path, table_folder, tabl
         raise
 
 if __name__ == "__main__":
-    pdf_path = "ENG-ATA-8W-235-01-11-29-24.pdf"
+    pdf_path = "LCM300.pdf"
     image_folder = "images"
     table_folder = "tables_output"
     output_pdf_path = "modified.pdf"
