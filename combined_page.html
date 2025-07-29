@@ -1,0 +1,474 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   LCM3000 Series Technical Reference Note
+  </title>
+  <style>
+   body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            margin-left: 150px;
+            margin-right: 150px;
+        }
+        .container {
+            max-width: 816px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #eee;
+            padding: 20px;
+            border-radius: 8px 8px 0 0;
+        }
+        .header-text {
+            flex: 1;
+        }
+        .header h1 {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0;
+            color: #005596;
+        }
+        .header h2 {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 5px 0;
+            color: #333;
+        }
+        .header img {
+            max-width: 200px;
+            height: auto;
+            margin-left: 20px;
+        }
+        .section-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #005596;
+            margin: 20px 0 10px;
+        }
+        .content {
+            font-size: 12px;
+            line-height: 1.5;
+        }
+        .content p {
+            margin: 0 0 10px;
+        }
+        .features-list {
+            list-style-type: none;
+            padding: 0;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+        .features-list li {
+            margin-bottom: 5px;
+            position: relative;
+            padding-left: 20px;
+        }
+        .features-list li:before {
+            content: "\2022";
+            color: #005596;
+            position: absolute;
+            left: 0;
+        }
+        .at-a-glance {
+            margin: 20px 0;
+        }
+        .at-a-glance table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 12px;
+        }
+        .at-a-glance th, .at-a-glance td {
+            padding: 8px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        .at-a-glance th {
+            font-weight: bold;
+            color: #005596;
+        }
+        .compliance-safety {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .compliance-safety div {
+            width: 48%;
+        }
+        .compliance-safety h3 {
+            font-size: 14px;
+            font-weight: bold;
+            color: #005596;
+            margin: 0 0 10px;
+        }
+        .compliance-safety ul {
+            list-style-type: none;
+            padding: 0;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+        .compliance-safety li {
+            margin-bottom: 5px;
+            position: relative;
+            padding-left: 20px;
+        }
+        .compliance-safety li:before {
+            content: "\2022";
+            color: #005596;
+            position: absolute;
+            left: 0;
+        }
+        .footer {
+            text-align: center;
+            font-size: 10px;
+            color: #666;
+            margin-top: 20px;
+        }
+        .bottom-images {
+            position: absolute;
+            bottom: 40px;
+            right: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .bottom-images img {
+            max-width: 150px;
+            height: auto;
+        }
+  </style>
+  <style>
+   body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            margin-left: 150px;
+            margin-right: 150px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #004080;
+            font-weight: bold;
+            background-color: #dfdfdd;
+        }
+        .section {
+            background: #fff;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: rgb(133, 131, 131);
+            margin-top: 0px;
+            background-color: #dfdfdd;
+            font-size: medium;
+            font-weight: normal;
+        }
+        h3 {
+            color: rgb(133, 131, 131);
+            margin-top: 0px;
+            background-color: #dfdfdd;
+            font-size: medium;
+            font-weight: normal;
+        }
+        table {
+            width: 70%;
+            border-collapse: expanded;
+            margin: 30px auto; /* Adjusted for better centering */
+        }
+        table, th, td {
+            border: 1px solid #000000;
+        }
+        th, td {
+            padding: 12px;
+            text-align: center;
+        }
+        th {
+            background-color: #004080;
+            color: #fff;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        ul {
+            list-style-type: disc;
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #004080;
+            color: #fff;
+            border-radius: 0 0 8px 8px;
+            margin-top: 20px;
+            font-size: 12pt;
+        }
+        .footer a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .note {
+            background: #e6f3ff;
+            padding: 10px;
+            border-left: 4px solid #004080;
+            margin: 10px 0;
+        }
+        .image-placeholder {
+            background: #eee;
+            padding: 20px;
+            text-align: center;
+            margin: 20px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            align-items: center;
+        }
+        .image-placeholder p {
+            margin: 20;
+            font-style: italic;
+            align-items: center;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            align-items: center;
+        }
+        pre {
+            background: #f9f9f9;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        strong {
+            color: #004080
+        }
+        .image-row {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        .image-row img {
+            max-width: 30%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="header">
+    <div class="header-text">
+     <h1>
+      ARTESYN LCM3000 SERIES
+     </h1>
+     <h2>
+      3000 Watts Bulk Front End
+     </h2>
+    </div>
+    <img alt="LCM3000 Image" src="images/LCM3000-0-0.png"/>
+   </div>
+   <div class="content">
+    <div class="section">
+     <h3 class="section-title">
+      PRODUCT DESCRIPTION
+     </h3>
+     <p>
+      Advanced Energy’s Artesyn LCM3000 series provide for a very wide range of AC-DC embedded power requirement. Featuring high build quality with robust screw terminals, long life, and typical full-load efficiency of greater than 90 percent, these units are ideal for use in industrial and medical applications. They are backed by a comprehensive set of industrial and medical safety approvals and certificates. Variable-speed ‘Smart Fans’ draw on software controls developed by Advanced Energy to match fan speed to the unit’s cooling requirement and load current. Slowing the fan not only saves power but also reduces wear, thus extending its life.
+     </p>
+    </div>
+    <div class="section">
+     <h3 class="section-title">
+      SPECIAL FEATURES
+     </h3>
+     <ul class="features-list">
+      <li>
+       3000 watts output power
+      </li>
+      <li>
+       Low cost
+      </li>
+      <li>
+       2.5” x 7.0” x 10.9”
+      </li>
+      <li>
+       15.7 watts per cubic inch
+      </li>
+      <li>
+       Industrial/medical safety
+      </li>
+      <li>
+       -40°C to 70°C with derating
+      </li>
+      <li>
+       5 Vdc @ 2 A Housekeeping
+      </li>
+      <li>
+       High efficiency: 90% typical
+      </li>
+      <li>
+       Variable speed “smart fans”
+      </li>
+      <li>
+       DSP controlled
+      </li>
+      <li>
+       Conformal coat option
+      </li>
+      <li>
+       ±25% adjustment range
+      </li>
+      <li>
+       V-Programming from 20% to 125%
+      </li>
+      <li>
+       VAR configurable to any voltage from a single unit
+      </li>
+      <li>
+       Semi F47 compliance at high line
+      </li>
+      <li>
+       Five-year warranty
+      </li>
+      <li>
+       Supports redundant operation
+      </li>
+     </ul>
+    </div>
+    <div class="at-a-glance">
+     <h3 class="section-title">
+      AT A GLANCE
+     </h3>
+     <table>
+      <tr>
+       <th>
+        Total Power
+       </th>
+       <td>
+        3000 Watts
+       </td>
+      </tr>
+      <tr>
+       <th>
+        Input Voltage
+       </th>
+       <td>
+        90 to 264 Vac / 128 to 370 Vdc
+       </td>
+      </tr>
+      <tr>
+       <th>
+        # of Outputs
+       </th>
+       <td>
+        Single
+       </td>
+      </tr>
+     </table>
+    </div>
+    <div class="compliance-safety">
+     <div>
+      <h3>
+       COMPLIANCE
+      </h3>
+      <ul>
+       <li>
+        EMI Class A, with 6db margin
+       </li>
+       <li>
+        EN61000 Immunity
+       </li>
+       <li>
+        RoHS3
+       </li>
+      </ul>
+     </div>
+     <div>
+      <h3>
+       SAFETY
+      </h3>
+      <ul>
+       <li>
+        UL/cUL Recognized
+       </li>
+       <li>
+        ITE (UL/CSA62368-1)
+       </li>
+       <li>
+        ANSI/AAMI ES60601-1L
+       </li>
+       <li>
+        TUV-SuD ITE + Medical
+       </li>
+       <li>
+        CE LVD (EN62368-1 + ROHS)
+       </li>
+       <li>
+        UKCA Mark
+       </li>
+       <li>
+        CB Report
+       </li>
+       <li>
+        Demko for IEC60950-1
+       </li>
+       <li>
+        TUV-SuD for IEC60601-1
+       </li>
+       <li>
+        DEMKO for IEC62368-1
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div class="bottom-images">
+     <img alt="Additional Image 1" src="images/LCM3000-0-1.png"/>
+     <img alt="Additional Image 2" src="images/LCM3000-0-2.png"/>
+    </div>
+   </div>
+   <div class="footer">
+    ©2025 Advanced Energy Industries, Inc.
+   </div>
+  </div>
+ </body>
+</html>
+```

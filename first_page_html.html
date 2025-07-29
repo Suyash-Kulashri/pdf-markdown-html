@@ -1,0 +1,231 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LCM3000 Series Product Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            margin-left: 150px;
+            margin-right: 150px;
+        }
+        .container {
+            background: #fff;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            background-color: #dfdfdd;
+            padding: 20px;
+            border-radius: 8px 8px 0 0;
+        }
+        .header-text {
+            flex: 1;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #004080;
+            font-weight: bold;
+        }
+        .header h2 {
+            color: rgb(133, 131, 131);
+            margin-top: 5px;
+            font-size: medium;
+            font-weight: normal;
+        }
+        .header img {
+            max-width: 500px;
+            height: auto;
+            margin-left: 20px;
+        }
+        .section-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #005596;
+            margin: 20px 0 10px;
+        }
+        .content {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .content p {
+            margin: 0 0 10px;
+            font-size: 16px;
+        }
+        .features-list {
+            list-style-type: none;
+            padding: 0;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .features-list li {
+            margin-bottom: 5px;
+            position: relative;
+            padding-left: 20px;
+        }
+        .features-list li:before {
+            content: "\2022";
+            color: #005596;
+            position: absolute;
+            left: 0;
+            font-size: 16px;
+        }
+        .at-a-glance {
+            width: 48%;
+            margin: 20px 0;
+        }
+        .at-a-glance table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .at-a-glance th, .at-a-glance td {
+            padding: 8px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        .at-a-glance th {
+            font-weight: bold;
+            color: #005596;
+        }
+        .compliance-safety {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .compliance-safety div {
+            width: 48%;
+        }
+        .compliance-safety h3 {
+            font-size: 14px;
+            font-weight: bold;
+            color: #005596;
+            margin: 0 0 10px;
+        }
+        .compliance-safety ul {
+            list-style-type: none;
+            padding: 0;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        .compliance-safety li {
+            margin-bottom: 5px;
+            position: relative;
+            padding-left: 20px;
+        }
+        .compliance-safety li:before {
+            content: "\2022";
+            color: #005596;
+            position: absolute;
+            left: 0;
+        }
+        .fp-footer {
+            text-align: center;
+            font-size: 10px;
+            color: #666;
+            margin-top: 20px;
+        }
+        .fp-bottom-images {
+            position: absolute;
+            bottom: 40px;
+            right: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .fp-bottom-images img {
+            max-width: 100px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-text">
+                <h1>ARTESYN</h1>
+                <h2>LCM3000 SERIES - 3000 Watts Bulk Front End</h2>
+            </div>
+            <img src="images/LCM3000.pdf-0-0.png" alt="Product Image">
+        </div>
+        <div class="content">
+            <div class="section-title">PRODUCT DESCRIPTION</div>
+            <p>Advanced Energy’s Artesyn LCM3000 series provide for a very wide range of AC-DC embedded power requirement. Featuring high build quality with robust screw terminals, long life, and typical full-load efficiency of greater than 90 percent, these units are ideal for use in industrial and medical applications. They are backed by a comprehensive set of industrial and medical safety approvals and certificates. Variable-speed ‘Smart Fans’ draw on software controls developed by Advanced Energy to match fan speed to the unit’s cooling requirement and load current. Slowing the fan not only saves power but also reduces wear, thus extending its life.</p>
+            
+            <div class="section-title">SPECIAL FEATURES</div>
+            <ul class="features-list">
+                <li>3000 watts output power</li>
+                <li>Low cost</li>
+                <li>2.5” x 7.0” x 10.9”</li>
+                <li>15.7 watts per cubic inch</li>
+                <li>Industrial/medical safety</li>
+                <li>-40 °C to 70 °C with derating</li>
+                <li>5 Vdc @ 2 A Housekeeping</li>
+                <li>High efficiency: 90% typical</li>
+                <li>Variable speed “smart fans”</li>
+                <li>DSP controlled</li>
+                <li>Supports redundant operation</li>
+            </ul>
+            
+            <div class="section-title">AT A GLANCE</div>
+            <table class="at-a-glance">
+                <tr>
+                    <th>Total Power</th>
+                    <td>3000 Watts</td>
+                </tr>
+                <tr>
+                    <th>Input Voltage</th>
+                    <td>90 to 264 Vac, 128 to 370 Vdc</td>
+                </tr>
+                <tr>
+                    <th># of Outputs</th>
+                    <td>Single</td>
+                </tr>
+            </table>
+            
+            <div class="compliance-safety">
+                <div>
+                    <h3>COMPLIANCE</h3>
+                    <ul>
+                        <li>EMI Class A, with 6db margin</li>
+                        <li>EN61000 Immunity</li>
+                        <li>RoHS3</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>SAFETY</h3>
+                    <ul>
+                        <li>UL/cUL Recognized</li>
+                        <li>ITE(UL/CSA62368-1)</li>
+                        <li>ANSI/AAMI ES60601-1L</li>
+                        <li>TUV-SuD ITE + Medical</li>
+                        <li>CE LVD (EN62368-1 + ROHS)</li>
+                        <li>UKCA Mark</li>
+                        <li>CB Report</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="fp-bottom-images">
+            <img src="images/LCM3000.pdf-0-1.png" alt="Additional Image 1">
+            <img src="images/LCM3000.pdf-0-2.png" alt="Additional Image 2">
+        </div>
+        
+        <div class="fp-footer">©2025 Advanced Energy Industries, Inc.</div>
+    </div>
+</body>
+</html>
+```

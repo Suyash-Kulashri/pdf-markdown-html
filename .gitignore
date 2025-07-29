@@ -16,20 +16,6 @@ ENV/
 .DS_Store
 Thumbs.db
 
-# Output and generated files
-*.pdf
-*.html
-*.jpeg
-*.jpg
-
-# Markdown output
-first_page.md
-remaining_pages.md
-
-# Table and image outputs
-images/
-tables_output/
-
 # Log files
 *.log
 

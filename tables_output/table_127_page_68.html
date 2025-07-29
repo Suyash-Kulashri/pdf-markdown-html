@@ -1,0 +1,258 @@
+<table border="1" class="dataframe pdf-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+      <th>6</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Command \nCode</td>
+      <td>Command Name</td>
+      <td>Default Value</td>
+      <td>Access \nType</td>
+      <td>Data Bytes</td>
+      <td>Data \nFormat</td>
+      <td>Description</td>
+    </tr>
+    <tr>
+      <td>79h</td>
+      <td>b5 - VOUT_OV _FAULT</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>Output over-voltage fault has \noccurred, will only be cleared \nwhen latching condition is \nremoved</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>b4 - IOUT_OC_FAULT</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>Not Supported</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>b3 - VIN_UV_FAULT</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>Not Supported</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>b2 - TEMPERATURE</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>A temperature fault or warning \nhas occurred, will only be cleared \nwhen condition is removed</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>b1 - CML</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>A communication, memory or \nlogic fault has occurred</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>B0 -\nNONE_OF_THE_ABOVE</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>Not Supported</td>
+    </tr>
+    <tr>
+      <td>7Ah</td>
+      <td>STATUS_VOUT</td>
+      <td>00</td>
+      <td>R/W</td>
+      <td>1</td>
+      <td>B</td>
+      <td>Output voltage related faults and \nwarnings</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>b7 - VOUT_OV_FAULT</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>VOUT Over--voltage Fault</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>b6 - VOUT_OV_WARNING</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>VOUT Over--voltage Warning</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>b5 - VOUT_UV_WARNING</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>Not Supported</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>b4 - VOUT_UV_FAULT</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>VOUT Under-voltage Fault, \nasserts during short circuit\ncondition and when output \nvoltage reaches 35% of default \nvalue during constant current \nmode</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>b3 - VOUT_MAX Warning</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>Not Supported</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>b2 - TON_MAX_FAULT</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>TON_MAX_FAULT</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>b1 - TOFF_MAX_WARNING</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>Not Supported</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>b0 - VOUT Tracking Error</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>Not Supported</td>
+    </tr>
+    <tr>
+      <td>7Dh</td>
+      <td>STATUS_TEMPERATURE</td>
+      <td>00</td>
+      <td>R/W</td>
+      <td>1</td>
+      <td>B</td>
+      <td>Temperature related faults and \nwarnings</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>b7 - OT_FAULT</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>Over temperature Fault</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>b6 - OT_WARNING</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>Over temperature Warning</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>b5 - UT_WARNING</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>Not Supported</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>b4 - UT_FAULT</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>Not Supported</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>b3:0</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>reserved</td>
+    </tr>
+    <tr>
+      <td>7Eh</td>
+      <td>STATUS_CML</td>
+      <td>00</td>
+      <td>R/W</td>
+      <td>1</td>
+      <td>B</td>
+      <td>Communications, Logic and \nMemory</td>
+    </tr>
+    <tr>
+      <td>80h</td>
+      <td>STATUS_MFR_SPECIFIC</td>
+      <td>00</td>
+      <td>R/W</td>
+      <td>1</td>
+      <td>B</td>
+      <td>Manufacturer Status codes</td>
+    </tr>
+    <tr>
+      <td>81h</td>
+      <td>STATUS_FANS_1_2</td>
+      <td>00</td>
+      <td>R/W</td>
+      <td>1</td>
+      <td>B</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>8Bh</td>
+      <td>READ_VOUT</td>
+      <td>-</td>
+      <td>R</td>
+      <td>2</td>
+      <td>Linear</td>
+      <td>Returns the actual, measured \nvoltage in Volts</td>
+    </tr>
+    <tr>
+      <td>8Ch</td>
+      <td>READ_IOUT</td>
+      <td>-</td>
+      <td>R</td>
+      <td>2</td>
+      <td>Linear</td>
+      <td>Returns the output current in \namperes</td>
+    </tr>
+  </tbody>
+</table>

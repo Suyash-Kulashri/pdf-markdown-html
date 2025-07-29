@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LCM500 Series Datasheet</title>
+    <style>
+body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #004080;
+            font-weight: bold;
+            background-color: #dfdfdd;
+        }
+        .section {
+            background: #fff;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #004080;
+            border-bottom: 2px solid #004080;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        h3 {
+            color: rgb(133, 131, 131);
+            margin-top: 0px;
+            background-color: #dfdfdd;
+            font-size: medium;
+            font-weight: normal;
+        }
+        table {
+            width: 85%;
+            border-collapse: expanded;
+            margin: 30px auto; /* Adjusted for better centering */
+        }
+        table, th, td {
+            border: 1px solid #000000;
+        }
+        th, td {
+            padding: 12px;
+            text-align: center;
+        }
+        th {
+            background-color: #004080;
+            color: #fff;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        ul {
+            list-style-type: disc;
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #004080;
+            color: #fff;
+            border-radius: 0 0 8px 8px;
+            margin-top: 20px;
+            font-size: 12pt;
+        }
+        .footer a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .note {
+            background: #e6f3ff;
+            padding: 10px;
+            border-left: 4px solid #004080;
+            margin: 10px 0;
+        }
+        .image-placeholder {
+            background: #eee;
+            padding: 20px;
+            text-align: center;
+            margin: 20px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            align-items: center;
+        }
+        .image-placeholder p {
+            margin: 20;
+            font-style: italic;
+            align-items: center;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            align-items: center;
+        }
+        pre {
+            background: #f9f9f9;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        strong {
+            color: #004080
+        }
+        .image-row {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        .image-row img {
+            max-width: 30%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+    </style>
+</head>
+<body>
+    <header style="position: relative; min-height: 80px;" class="header">
+        <span style="position: absolute; left: 30px; top: 50px; color: #004080; font-weight: bold; font-size: 1.2em;">TECHNICAL REFERENCE NOTE</span>
+        <img src="advance_energy.png" alt="Header Image" style="position: absolute; top: 0; right: 50px; max-width: 700px;">
+    </header>
+    <main>
+        <p>```markdown</p>
+<h1>LCM500 Series Datasheet</h1>
+<p><strong>500 Watts Bulk Front End</strong></p>
+<hr />
+<h2>AT A GLANCE</h2>
+<p>Advanced Energy’s Artesyn LCM500 series provides a wide range of AC-DC embedded power requirements. Featuring high build quality with robust screw terminals, long life, and typical full-load efficiency of greater than 91 percent, these units are ideal for use in industrial and medical applications. They are backed by a comprehensive set of industrial and medical safety approvals and certificates. Variable-speed ‘Smart Fans’ draw on software controls developed by Advanced Energy to match fan speed to the unit’s cooling requirement and load current. Slowing the fan not only saves power but also reduces wear, thus extending its life. </p>
+<h3>SPECIAL FEATURES</h3>
+<ul>
+<li><strong>510 W output power</strong> (600 W at 45°C for 24 V and 36 V models)</li>
+<li>Low cost</li>
+<li>Dimensions: <strong>1.61” x 4.0” x 9.0”</strong> (Dimensions scaled proportionally to the ~167% increase in power)</li>
+<li><strong>7.1 W/in³</strong></li>
+<li>Industrial/Medical safety</li>
+<li>Operating temperature: <strong>-40°C to 70°C</strong> with derating</li>
+<li>Optional <strong>5 V @ 2 A</strong> housekeeping</li>
+<li>High efficiency: <strong>91% @ 230 VAC</strong></li>
+<li>Variable speed “Smart Fans”</li>
+<li>DSP controlled</li>
+<li>Conformal coat option</li>
+<li>Wide adjustment range</li>
+<li>Margin programming</li>
+<li>OR-ing FET</li>
+<li>PMBus compliant</li>
+</ul>
+<h3>Compliance</h3>
+<ul>
+<li>EMI Class B</li>
+<li>EN61000 Immunity</li>
+<li>RoHS 3</li>
+<li>PMBus</li>
+</ul>
+<h3>SAFETY</h3>
+<ul>
+<li>UL62368-1, 1598/1433, and 60601-1 Ed 3</li>
+<li>CSA 62368-1</li>
+<li>TUV 62368-1 and 60601-1</li>
+<li>China CCC</li>
+<li>CB Scheme Report/Cert</li>
+<li>CE and UKCA Mark</li>
+</ul>
+<p><em>Note: LCM500 tested according to the medical standard IEC 60601-1-2 4th Edition.</em></p>
+<hr />
+<h2>ELECTRICAL SPECIFICATIONS</h2>
+<h3>Input</h3>
+<table>
+<thead>
+<tr>
+<th>Specification</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input voltage range</td>
+<td><strong>90 to 264 VAC</strong> (Operating) <br> 115/230 VAC (Nominal)</td>
+</tr>
+<tr>
+<td>Frequency</td>
+<td><strong>47 to 63 Hz</strong>, Nominal 50/60</td>
+</tr>
+<tr>
+<td>Input fusing</td>
+<td>Internal 10 A fuses, both lines fused</td>
+</tr>
+<tr>
+<td>Inrush current</td>
+<td>≤ 20 A peak, cold start at 25°C</td>
+</tr>
+<tr>
+<td>Power factor</td>
+<td>0.98 typical, meets EN61000-3-2</td>
+</tr>
+<tr>
+<td>Harmonics</td>
+<td>Meets IEC61000-3-2 requirements</td>
+</tr>
+<tr>
+<td>Input current</td>
+<td><strong>5 Arms max input current</strong>, at 90 VAC</td>
+</tr>
+<tr>
+<td>Hold up time</td>
+<td><strong>20 ms</strong> minimum for main O/P, at full rated load</td>
+</tr>
+<tr>
+<td>Efficiency</td>
+<td>&gt; 91% typical at full load / 230 VAC nominal</td>
+</tr>
+<tr>
+<td>Leakage current</td>
+<td>&lt; 0.3 mA at 240 VAC</td>
+</tr>
+<tr>
+<td>Power line transient</td>
+<td>MOV directly after the fuse</td>
+</tr>
+<tr>
+<td>Isolation</td>
+<td>Isolation: PRI-Chassis 2500 VDC Basic <br> PRI-SEC 4000 VAC Reinforced 2xMOPP <br> SEC-Chassis 500 VDC</td>
+</tr>
+</tbody>
+</table>
+<h3>Output</h3>
+<table>
+<thead>
+<tr>
+<th>Specification</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Output rating</td>
+<td>See table 1</td>
+</tr>
+<tr>
+<td>Set point</td>
+<td>± 0.5%</td>
+</tr>
+<tr>
+<td>Total regulation range</td>
+<td>Main output ± 2%</td>
+</tr>
+<tr>
+<td>Rated load</td>
+<td><strong>510 W</strong> (600 W for current Q and U variants) <br> Derate linearly to 50% from 50°C to 70°C</td>
+</tr>
+<tr>
+<td>Minimum load</td>
+<td>Main output @ 0.0 A <br> 5V VSB @ 0.0 A</td>
+</tr>
+<tr>
+<td>Output noise (PARD)</td>
+<td>1% max p-p <br> 100 mV max p-p</td>
+</tr>
+<tr>
+<td>Output voltage overshoot</td>
+<td>No overshoot/undershoot outside the regulation band during on or off cycle</td>
+</tr>
+<tr>
+<td>Transient response</td>
+<td>&lt; 300 μSec 50% load step @ 1 A/μs</td>
+</tr>
+<tr>
+<td>Max units in parallel</td>
+<td>Up to 10</td>
+</tr>
+<tr>
+<td>Short circuit protection</td>
+<td>Protected, no damage to occur in bounce mode</td>
+</tr>
+<tr>
+<td>Remote sense</td>
+<td>Compensation up to 500 mV</td>
+</tr>
+<tr>
+<td>Forced load sharing</td>
+<td>To within 10% of all shared outputs (Analog sharing control)</td>
+</tr>
+<tr>
+<td>Overload protection (OCP)</td>
+<td>105% to 125% <br> 120% to 170% Main output, 5V VSB output</td>
+</tr>
+<tr>
+<td>Overvoltage protection (OVP)</td>
+<td>125% to 145% <br> 110% to 125% (12 V output, 5V VSB output)</td>
+</tr>
+</tbody>
+</table>
+<h3>ENVIRONMENTAL SPECIFICATIONS</h3>
+<table>
+<thead>
+<tr>
+<th>Specification</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Operating temperature</td>
+<td>-40°C to +70°C, linear derating to 50% from 50°C to 70°C</td>
+</tr>
+<tr>
+<td>Storage temperature</td>
+<td>-40°C to +85°C</td>
+</tr>
+<tr>
+<td>Humidity</td>
+<td>10 to 90%, non-condensing. Operating. Conformal coat option available</td>
+</tr>
+<tr>
+<td>Fan noise</td>
+<td>&lt; 45 dBA, 80% load at 40°C; Fan Off when unit is inhibited</td>
+</tr>
+<tr>
+<td>Altitude</td>
+<td>Operating, 10,000 feet (3048 m) <br> Storage, 30,000 feet</td>
+</tr>
+<tr>
+<td>Shock</td>
+<td>MIL-STD-810F 516.5, Procedure I, VI. Storage</td>
+</tr>
+<tr>
+<td>Vibration</td>
+<td>MIL-STD-810F 514.5, Cat. 4, 10. Storage</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>ORDERING INFORMATION</h2>
+<table>
+<thead>
+<tr>
+<th>Model Number</th>
+<th>Output</th>
+<th>Nominal Output Voltage</th>
+<th>Set Point Tolerance</th>
+<th>Adjustment Range</th>
+<th>Current Output</th>
+<th>Ripple P/P (0-50 ˚C)</th>
+<th>Max Continuous Power</th>
+<th>Combined Line/Load Regulation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LCM500L</td>
+<td>12 V</td>
+<td>12 V</td>
+<td>± 0.5%</td>
+<td>9.6 - 14.4 V</td>
+<td>25.0 A</td>
+<td>120 mV</td>
+<td>510 W</td>
+<td>2%</td>
+</tr>
+<tr>
+<td>LCM500N</td>
+<td>15 V</td>
+<td>15 V</td>
+<td>± 0.5%</td>
+<td>14.25 - 19.5 V</td>
+<td>20.0 A</td>
+<td>150 mV</td>
+<td>510 W</td>
+<td>2%</td>
+</tr>
+<tr>
+<td>LCM500Q</td>
+<td>24 V</td>
+<td>24 V</td>
+<td>± 0.5%</td>
+<td>19.2 - 28.8 V</td>
+<td>14.5 A</td>
+<td>240 mV</td>
+<td>600 W</td>
+<td>2%</td>
+</tr>
+<tr>
+<td>LCM500U</td>
+<td>36 V</td>
+<td>36 V</td>
+<td>± 0.5%</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Predicted Table Updates</h2>
+<h3>Table 1</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">0</th>
+<th style="text-align: right;">1</th>
+<th style="text-align: right;">2</th>
+<th style="text-align: right;">3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">75</td>
+<td style="text-align: right;">100</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Predicted Change</strong>: The values in Table 1 may change based on trends in the predict for LCM500 series.</p>
+    </main>
+    <h2 align="center"> ABOUT ADVANCED ENERGY</h2>
+    <footer class="footer">
+        <p>Advanced Energy (AE) has devoted more than three decades to perfecting power for its global customers. AE designs and manufactures highly engineered, precision power conversion, measurement and control solutions for mission-critical applications and processes.</p>
+<p>Our products enable customer innovation in complex applications for a wide range of industries including semiconductor equipment, industrial, manufacturing, telecommunications, data center computing, and medical. With deep applications know-how and responsive service and support across the globe, we build collaborative partnerships to meet rapid technological developments, propel growth for our customers, and innovate the future of power.</p>
+<p>For international contact information, visit advancedenergy.com.</p>
+<p>powersales@aei.com (Sales Support)<br />
+productsupport.ep@aei.com (Technical Support)  +1 888 412 7832</p>
+<p>Specifications are subject to change without notice. Not responsible for errors or omissions. ©2020 Advanced Energy Industries, Inc. All rights reserved. Advanced Energy®, and AE® are U.S. trademarks of Advanced Energy Industries, Inc.</p>
+    </footer>
+</body>
+</html>

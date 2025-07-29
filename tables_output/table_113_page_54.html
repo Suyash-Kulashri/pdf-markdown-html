@@ -1,0 +1,213 @@
+<table border="1" class="dataframe pdf-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+      <th>6</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Command \nCode</td>
+      <td>Command Name</td>
+      <td>Default Value</td>
+      <td>Access \nType</td>
+      <td>Data Bytes</td>
+      <td>Data \nFormat</td>
+      <td>Description</td>
+    </tr>
+    <tr>
+      <td>00h</td>
+      <td>PAGE</td>
+      <td>-</td>
+      <td>R</td>
+      <td>1</td>
+      <td>H</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>01h</td>
+      <td>OPERATION</td>
+      <td>80</td>
+      <td>R/W</td>
+      <td>1</td>
+      <td>B</td>
+      <td>Used to turn the unit ON/OFF in \nconjunction with the input \nINH_EN pin. Write 40h to turn off \nPSU, 80h to turn on the PSU</td>
+    </tr>
+    <tr>
+      <td>02h</td>
+      <td>ON_OFF_CONFIG</td>
+      <td>1E</td>
+      <td>R</td>
+      <td>1</td>
+      <td>B</td>
+      <td>Configures the combination of \nINH_EN pin and serial \ncommunication commands \nneeded to turn the unit ON/OFF</td>
+    </tr>
+    <tr>
+      <td>03h</td>
+      <td>CLEAR_FAULTS</td>
+      <td>-</td>
+      <td>S</td>
+      <td>0</td>
+      <td>N/A</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>10h</td>
+      <td>WRITE_PROTECT</td>
+      <td>80</td>
+      <td>R/W</td>
+      <td>1</td>
+      <td>B</td>
+      <td>Used to Control Writing to the \nPMBus Device\n80h - Disables write \n40h - Disables write except 00h, \n01h\n00 - Enables write to all writeable \ncommands</td>
+    </tr>
+    <tr>
+      <td>15h</td>
+      <td>STORE_USER_ALL</td>
+      <td>-</td>
+      <td>S</td>
+      <td>0</td>
+      <td>N/A</td>
+      <td>Copies the Operating memory \ntable to the matching USER non-\nvolatile memory</td>
+    </tr>
+    <tr>
+      <td>1Bh</td>
+      <td>SMBALERT_MASK</td>
+      <td>0</td>
+      <td>BR/W</td>
+      <td>1/1 (R)\n2 (W)</td>
+      <td>B</td>
+      <td>BMC - no alert</td>
+    </tr>
+    <tr>
+      <td>20h</td>
+      <td>VOUT_MODE</td>
+      <td>18</td>
+      <td>R</td>
+      <td>1</td>
+      <td>B</td>
+      <td>Specifies the mode and \nparameters of Output Voltage \nrelated Data Formats</td>
+    </tr>
+    <tr>
+      <td>35h</td>
+      <td>VIN_ON</td>
+      <td>90</td>
+      <td>R</td>
+      <td>2</td>
+      <td>Linear</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>36h</td>
+      <td>VIN_OFF</td>
+      <td>85</td>
+      <td>R</td>
+      <td>2</td>
+      <td>Linear</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>3Bh</td>
+      <td>FAN_COMMAND_1</td>
+      <td>0</td>
+      <td>R/W</td>
+      <td>2</td>
+      <td>Linear</td>
+      <td>Read and write Fan rotation</td>
+    </tr>
+    <tr>
+      <td>40h</td>
+      <td>VOUT_OV_FAULT_LIMIT</td>
+      <td>24.297</td>
+      <td>R</td>
+      <td>2</td>
+      <td>Linear</td>
+      <td>Sets Output Over voltage \nthreshold (24.297V)</td>
+    </tr>
+    <tr>
+      <td>41h</td>
+      <td>VOUT_OV_FAULT_RESPON\nSE</td>
+      <td>80</td>
+      <td>R</td>
+      <td>1</td>
+      <td>B</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>42h</td>
+      <td>VOUT_OV_WARN_LIMIT</td>
+      <td>19.789</td>
+      <td>R</td>
+      <td>2</td>
+      <td>Linear</td>
+      <td>Sets Over-voltage Warning \nthreshold(19.789V)</td>
+    </tr>
+    <tr>
+      <td>45h</td>
+      <td>VOUT_UV_FAULT_RESPON\nSE</td>
+      <td>78</td>
+      <td>R</td>
+      <td>1</td>
+      <td>B</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>46h</td>
+      <td>IOUT_OC_FAULT_LIMIT</td>
+      <td>215.5</td>
+      <td>R</td>
+      <td>2</td>
+      <td>Linear</td>
+      <td>Sets the Over current threshold in \nAmps (215.5A )</td>
+    </tr>
+    <tr>
+      <td>47h</td>
+      <td>IOUT_OC_FAULT_RESPON\nSE</td>
+      <td>78</td>
+      <td>R</td>
+      <td>1</td>
+      <td>B</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>4Fh</td>
+      <td>OT_FAULT_LIMIT</td>
+      <td>112</td>
+      <td>R</td>
+      <td>2</td>
+      <td>Linear</td>
+      <td>Secondary ambient temperature \nFault threshold, in degree C \n(112degC)</td>
+    </tr>
+    <tr>
+      <td>50h</td>
+      <td>OT_FAULT_RESPONSE</td>
+      <td>C0</td>
+      <td>R</td>
+      <td>1</td>
+      <td>B</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>51h</td>
+      <td>OT_WARN_LIMIT</td>
+      <td>108</td>
+      <td>R</td>
+      <td>2</td>
+      <td>Linear</td>
+      <td>Secondary ambient temperature \nwarning threshold, in degree C. \nOperating limit (108degC)</td>
+    </tr>
+    <tr>
+      <td>6Ah</td>
+      <td>POUT_OP_WARN_LIMT</td>
+      <td>3452</td>
+      <td>R</td>
+      <td>2</td>
+      <td>Linear</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>

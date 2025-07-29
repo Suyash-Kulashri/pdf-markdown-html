@@ -1,0 +1,258 @@
+<table border="1" class="dataframe pdf-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+      <th>6</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Command \nCode</td>
+      <td>Command Name</td>
+      <td>Default Value</td>
+      <td>Access \nType</td>
+      <td>Data Bytes</td>
+      <td>Data \nFormat</td>
+      <td>Description</td>
+    </tr>
+    <tr>
+      <td>78h</td>
+      <td>STATUS_BYTE</td>
+      <td>00</td>
+      <td>R</td>
+      <td>1</td>
+      <td>B</td>
+      <td>Returns the summary of critical \nfaults</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>b7 - BUSY</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>Not Supported</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>b6 - OFF</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>Unit is OFF</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>b5 - VOUT_OV_FAULT</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>Output over-voltage fault has \noccurred, will only be cleared \nwhen latching condition is \nremoved</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>b4 - IOUT_OC_FAULT</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>Not Supported</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>b3 - VIN_UV_FAULT</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>Not Supported</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>b2 - TEMPERATURE</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>A temperature fault or warning \nhas occurred, will only be cleared \nwhen condition is removed</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>b1 - CML</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>A communication, memory or \nlogic fault has occurred</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>b0 - NONE OF THE ABOVE</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>Not Supported</td>
+    </tr>
+    <tr>
+      <td>79h</td>
+      <td>STATUS_WORD</td>
+      <td>0000</td>
+      <td>R</td>
+      <td>2</td>
+      <td>B</td>
+      <td>Summary of units Fault and \nwarning status</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>b15 - VOUT</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>An output voltage fault or \nwarning has occurred</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>b14 - IOUT/POUT</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>An Output current or power fault \nor warning has occurred</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>b13 - INPUT</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>Not Supported</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>b12 - MFR_SPECIFIC</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>A manufacturer specific fault or \nwarning has occurred</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>b11 - POWER_GOOD#</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>The POWER_GOOD signal is de-\nasserted</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>b10 - FANS</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>A fan or airflow fault or warning \nhas occurred</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>b9 - OTHERS</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>Not Supported</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>b8 - UKNOWN</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>Not Supported</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>b7 - BUSY</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>Not Supported</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>b6 - OFF</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>Unit is OFF</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>b5 - VOUT_OV _FAULT</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>Output over-voltage fault has \noccurred, will only be cleared \nwhen latching condition is \nremoved</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>b4 - IOUT_OC_FAULT</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>Not Supported</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>b3 - VIN_UV_FAULT</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>Not Supported</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>b2 - TEMPERATURE</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>A temperature fault or warning \nhas occurred, will only be cleared \nwhen condition is removed</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>b1 - CML</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>A communication, memory or \nlogic fault has occurred</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>B0 -\nNONE_OF_THE_ABOVE</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>Not Supported</td>
+    </tr>
+  </tbody>
+</table>
