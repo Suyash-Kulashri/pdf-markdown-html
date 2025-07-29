@@ -79,6 +79,7 @@ You are tasked with generating an HTML file that replicates the first page of a 
   - An `<h1>` with the main title (e.g., product name from PDF/Markdown).
   - An `<h2>` with a subtitle (e.g., product specification from PDF/Markdown).
   - The first image (from PDF images) positioned to the right of the `<h1>`.
+  - Keep the name and path of the images same as in the markdown file e.g., `images/[filename].pdf-0-0.png`, `images/[filename].pdf-0-1.png` `images/[filename].pdf-0-2.png`. (Note: the image name may or may not contain the .pdf extension, so ensure to handle both cases. if present so do not remove it.).
 - **Main Content**:
   - A section with a title (e.g., "PRODUCT DESCRIPTION") and a paragraph of text from PDF or Markdown.
   - A "SPECIAL FEATURES" section with a `<ul>` of features (bullet points) from PDF or Markdown.
@@ -146,7 +147,7 @@ Complete HTML content, including `<style>` tag with CSS, ready for `first_page_h
 
 if __name__ == "__main__":
     # Define file paths
-    pdf_path = "LCM300.pdf"
+    pdf_path = "LCM3000.pdf"
     md_path = "first_page.md"
     css_path = "first_page.css"
     output_path = "first_page_html.html"

@@ -1,4 +1,4 @@
-        body {
+body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
             margin: 0;
@@ -9,37 +9,37 @@
             margin-right: 150px;
         }
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background-color: #fff;
+            background: #fff;
+            margin: 20px 0;
             padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             position: relative;
         }
         .header {
-            background-color: #e0e0e0;
-            padding: 20px;
-            margin-bottom: 20px;
             display: flex;
             align-items: center;
+            background-color: #dfdfdd;
+            padding: 20px;
+            border-radius: 8px 8px 0 0;
         }
         .header-text {
             flex: 1;
         }
         .header h1 {
-            font-size: 24px;
-            font-weight: bold;
             margin: 0;
-            color: #005596;
+            font-size: 2.5em;
+            color: #004080;
+            font-weight: bold;
         }
         .header h2 {
-            font-size: 18px;
-            font-weight: bold;
-            margin: 5px 0;
-            color: #333;
+            color: rgb(133, 131, 131);
+            margin-top: 5px;
+            font-size: medium;
+            font-weight: normal;
         }
         .header img {
-            max-width: 200px;
+            max-width: 500px;
             height: auto;
             margin-left: 20px;
         }
@@ -50,16 +50,17 @@
             margin: 20px 0 10px;
         }
         .content {
-            font-size: 12px;
+            font-size: 16px;
             line-height: 1.5;
         }
         .content p {
             margin: 0 0 10px;
+            font-size: 16px;
         }
         .features-list {
             list-style-type: none;
             padding: 0;
-            font-size: 12px;
+            font-size: 16px;
             line-height: 1.5;
         }
         .features-list li {
@@ -72,14 +73,15 @@
             color: #005596;
             position: absolute;
             left: 0;
+            font-size: 16px;
         }
         .at-a-glance {
+            width: 48%;
             margin: 20px 0;
         }
         .at-a-glance table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 12px;
         }
         .at-a-glance th, .at-a-glance td {
             padding: 8px;
@@ -107,7 +109,7 @@
         .compliance-safety ul {
             list-style-type: none;
             padding: 0;
-            font-size: 12px;
+            font-size: 14px;
             line-height: 1.5;
         }
         .compliance-safety li {
@@ -121,13 +123,13 @@
             position: absolute;
             left: 0;
         }
-        .footer {
+        .fp-footer {
             text-align: center;
             font-size: 10px;
             color: #666;
             margin-top: 20px;
         }
-        .bottom-images {
+        .fp-bottom-images {
             position: absolute;
             bottom: 40px;
             right: 40px;
@@ -135,7 +137,7 @@
             flex-direction: column;
             gap: 10px;
         }
-        .bottom-images img {
-            max-width: 150px;
+        .fp-bottom-images img {
+            max-width: 100px;
             height: auto;
         }
